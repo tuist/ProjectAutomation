@@ -21,7 +21,7 @@ let package = Package(
             dependencies: [
                 .product(name: "SwiftToolsSupport-auto", package: "swift-tools-support-core")
             ],
-            path: "tuist/Sources/ProjectAutomation"
+            path: "ProjectAutomation"
         ),
     ]
 )
