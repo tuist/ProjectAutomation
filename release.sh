@@ -11,6 +11,7 @@ git checkout "$1"
 cd ..
 rm -rf ProjectAutomation
 cp -r tuist/Sources/ProjectAutomation .
+git add .
 git commit -am "$1" --allow-empty
 git push
 git tag "$1"
