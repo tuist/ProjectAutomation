@@ -13,6 +13,5 @@ rm -rf ProjectAutomation
 cp -r tuist/Sources/ProjectAutomation .
 git add .
 git commit -am "$1" --allow-empty
-git push
 git tag "$1"
-git push origin --tags
+git push origin --follow-tags
