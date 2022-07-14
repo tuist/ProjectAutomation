@@ -15,3 +15,4 @@ git add ProjectAutomation/**
 git commit -am "$1" --allow-empty
 git tag "$1"
 git push origin --follow-tags
+git push --tags
