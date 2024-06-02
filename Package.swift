@@ -13,7 +13,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-tools-support-core.git", .upToNextMinor(from: "0.2.0")),
+        .package(url: "https://github.com/apple/swift-tools-support-core", from: "0.6.1"),
     ],
     targets: [
         .target(
