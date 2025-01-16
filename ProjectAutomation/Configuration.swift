@@ -2,10 +2,10 @@ import Foundation
 
 // MARK: - Configuration
 
-// A the build Configuration of a target.
+// The build Configuration of a target.
 
 public struct Configuration: Equatable, Codable {
-    let settings: SettingsDictionary
+    private let settings: SettingsDictionary
 
     public init(
         settings: SettingsDictionary
@@ -16,19 +16,16 @@ public struct Configuration: Equatable, Codable {
 
 // MARK: - BuildConfiguration
 
-public struct BuildConfiguration: Equatable, Codable, Hashable {
-    public enum Variant: String, Codable, Hashable {
+public struct BuildConfiguration: Codable, Hashable {
+    public enum Variant: Codable {
         case debug
         case release
     }
 
-    public var name: String
-    public var variant: BuildConfiguration.Variant
+    private let name: String
+    private let variant: Variant
 
-    public init(
-        name: String,
-        variant: BuildConfiguration.Variant
-    ) {
+    public init(name: String, variant: Variant) {
         self.name = name
         self.variant = variant
     }
