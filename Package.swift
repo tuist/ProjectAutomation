@@ -12,16 +12,11 @@ let package = Package(
             targets: ["ProjectAutomation"]
         )
     ],
-    dependencies: [
-        .package(url: "https://github.com/apple/swift-tools-support-core.git", .upToNextMinor(from: "0.2.0")),
-    ],
     targets: [
         .target(
             name: "ProjectAutomation",
-            dependencies: [
-                .product(name: "SwiftToolsSupport-auto", package: "swift-tools-support-core")
-            ],
+            dependencies: [],
             path: "ProjectAutomation"
-        ),
+        )
     ]
 )
